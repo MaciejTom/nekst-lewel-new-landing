@@ -17,11 +17,13 @@ export function Hero() {
       {/* Main content */}
       <div className="relative z-10 max-w-5xl mx-auto">
         <h1 className="text-3d text-hero uppercase mb-8">
-          <span>Zobaczysz stronę</span>
+          <span>Zobaczysz swoją stronę</span>
           <br />
-          <span className="hero-key-text">zanim zapłacisz</span>
+          <span style={{ fontFamily: "'Rubik Wet Paint', cursive", fontWeight: 400 }}>
+            zanim zapłacisz
+          </span>
           <br />
-          <span>złotówkę</span>
+          <span>złotówkę.</span>
         </h1>
 
         <p className="text-body-lg font-bold uppercase tracking-tight text-secondary mb-12">
