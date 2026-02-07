@@ -1,26 +1,139 @@
+/* Google Fonts - must be first */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;700;900&family=Montserrat:wght@400;700;900&family=Oswald:wght@700&family=Barlow+Condensed:wght@800&family=Archivo+Black&family=DM+Sans:wght@700;900&family=Urbanist:wght@900&family=Syne:wght@800&family=Manrope:wght@800&family=Outfit:wght@900&family=Rubik+Wet+Paint&family=Rubik+Puddles&display=swap');
+
 @import "tailwindcss";
 
+/* CSS Custom Properties */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #f20d0d;
+  --secondary-color: #000000;
+  --shadow-color: #f20d0d;
+  --heading-font: 'Bebas Neue';
+  --body-font: 'Barlow';
+  --heading-weight: 900;
+  --hero-weight: 900;
+
+  /* Typography Scale */
+  --text-display: clamp(4rem, 10vw, 10rem);
+  --text-headline: clamp(3rem, 8vw, 6rem);
+  --text-title: clamp(2rem, 5vw, 4rem);
+  --text-body-lg: clamp(1.25rem, 2.5vw, 1.75rem);
+  --text-body: clamp(1.125rem, 2vw, 1.5rem);
+  --text-hero: clamp(2.8rem, 10vw, 140px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }
 
+/* Base body styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--body-font), sans-serif;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: background-color 0.5s ease, font-family 0.3s ease;
+}
+
+/* Heading styles */
+h1, h2, h3 {
+  font-family: var(--heading-font), sans-serif;
+  font-weight: var(--heading-weight);
+  transition: font-family 0.3s ease, font-weight 0.3s ease;
+}
+
+/* 3D Text Effect */
+.text-3d {
+  transform: perspective(1000px) rotateX(10deg) rotateY(-5deg) rotateZ(-2deg);
+  text-shadow:
+    1px 1px 0px var(--shadow-color),
+    2px 2px 0px var(--shadow-color),
+    3px 3px 0px var(--shadow-color),
+    4px 4px 0px var(--shadow-color),
+    5px 5px 0px var(--shadow-color),
+    6px 6px 0px var(--shadow-color),
+    7px 7px 0px var(--shadow-color),
+    8px 8px 0px var(--shadow-color),
+    15px 15px 30px rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+}
+
+.text-3d:hover {
+  transform: perspective(1000px) rotateX(15deg) rotateY(-10deg) rotateZ(-3deg) scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Typography classes */
+.text-hero {
+  font-size: var(--text-hero);
+  line-height: 0.85;
+  letter-spacing: -0.03em;
+}
+
+.text-display {
+  font-size: var(--text-display);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.text-headline {
+  font-size: var(--text-headline);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+
+.text-title {
+  font-size: var(--text-title);
+  line-height: 1;
+}
+
+.text-body-lg {
+  font-size: var(--text-body-lg);
+  line-height: 1.4;
+}
+
+.text-body {
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+/* Hero key text (bold) */
+.hero-key-text {
+  font-weight: var(--hero-weight) !important;
+}
+
+/* Background pattern */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+}
+
+/* Selection */
+::selection {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
