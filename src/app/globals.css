@@ -1,5 +1,5 @@
 /* Google Fonts - must be first */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;700;900&family=Montserrat:wght@400;700;900&family=Oswald:wght@700&family=Barlow+Condensed:wght@800&family=Archivo+Black&family=DM+Sans:wght@700;900&family=Urbanist:wght@900&family=Syne:wght@800&family=Manrope:wght@800&family=Outfit:wght@900&family=Rubik+Wet+Paint&family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
 
@@ -19,7 +19,6 @@
   --text-title: clamp(2rem, 5vw, 4rem);
   --text-body-lg: clamp(1.25rem, 2.5vw, 1.75rem);
   --text-body: clamp(1.125rem, 2vw, 1.5rem);
-  --text-hero: clamp(2.8rem, 10vw, 140px);
 }
 
 /* Hide scrollbar */
@@ -38,14 +37,16 @@ body {
   font-family: var(--body-font), sans-serif;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  transition: background-color 0.5s ease, font-family 0.3s ease;
+  /* Background tile pattern */
+  background-image: url('/newHero.jpg');
+  background-size: 400px;
+  background-repeat: repeat;
 }
 
 /* Heading styles */
 h1, h2, h3 {
   font-family: var(--heading-font), sans-serif;
   font-weight: var(--heading-weight);
-  transition: font-family 0.3s ease, font-weight 0.3s ease;
 }
 
 /* 3D Text Effect */
@@ -72,26 +73,35 @@ h1, h2, h3 {
 
 /* Typography classes */
 .text-hero {
-  font-size: var(--text-hero);
+  font-family: var(--heading-font), sans-serif;
+  font-weight: var(--heading-weight);
+  font-size: clamp(2.8rem, 10vw, 140px);
   line-height: 0.85;
   letter-spacing: -0.03em;
 }
 
 .text-display {
+  font-family: var(--heading-font), sans-serif;
+  font-weight: var(--heading-weight);
   font-size: var(--text-display);
   line-height: 0.9;
   letter-spacing: -0.02em;
 }
 
 .text-headline {
+  font-family: var(--heading-font), sans-serif;
+  font-weight: var(--heading-weight);
   font-size: var(--text-headline);
-  line-height: 0.9;
+  line-height: 0.95;
   letter-spacing: -0.02em;
 }
 
 .text-title {
+  font-family: var(--heading-font), sans-serif;
+  font-weight: var(--heading-weight);
   font-size: var(--text-title);
   line-height: 1;
+  letter-spacing: -0.01em;
 }
 
 .text-body-lg {
@@ -109,9 +119,48 @@ h1, h2, h3 {
   font-weight: var(--hero-weight) !important;
 }
 
-/* Background pattern */
-.bg-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+/* WCAG AA compliant text hierarchy */
+.text-muted {
+  opacity: 0.75;
+}
+
+.text-secondary {
+  opacity: 0.93;
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.125rem 2.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #000;
+}
+
+.btn-outline {
+  border: 2px solid currentColor;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* Selection */

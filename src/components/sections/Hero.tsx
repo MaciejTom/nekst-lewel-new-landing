@@ -1,5 +1,5 @@
 import { siteConfig } from '@/lib/config';
-import { Button, PhoneIcon } from '@/components/ui';
+import { PhoneIcon } from '@/components/ui';
 
 export function Hero() {
   return (
@@ -24,22 +24,18 @@ export function Hero() {
           <span>złotówkę</span>
         </h1>
 
-        <p
-          className="text-body-lg font-bold uppercase tracking-tight opacity-60 mb-12"
-          style={{ fontFamily: 'var(--body-font), sans-serif' }}
-        >
+        <p className="text-body-lg font-bold uppercase tracking-tight text-secondary mb-12">
           {siteConfig.description} — od {siteConfig.pricing.website.toLocaleString('pl-PL')} zł
         </p>
 
         <div className="flex justify-center gap-6">
-          <Button
+          <a
             href={`tel:${siteConfig.owner.phone}`}
-            variant="primary"
-            size="lg"
+            className="btn btn-primary"
           >
             <PhoneIcon size={20} />
             {siteConfig.owner.phoneFormatted}
-          </Button>
+          </a>
         </div>
       </div>
     </section>

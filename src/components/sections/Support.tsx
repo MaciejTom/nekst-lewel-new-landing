@@ -1,17 +1,27 @@
 import { siteConfig } from '@/lib/config';
-import { Section, SectionHeader } from '@/components/ui';
 
 export function Support() {
   return (
-    <Section id="opieka">
-      <SectionHeader
-        label="04 — Opieka"
-        title="Spokój\ni Wsparcie"
-      />
+    <section
+      className="min-h-screen flex flex-col justify-center px-4 md:px-12 py-32 w-full max-w-[1600px] mx-auto"
+      id="opieka"
+    >
+      <div className="mb-16">
+        <span
+          className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
+          aria-hidden="true"
+        >
+          04 — Opieka
+        </span>
+        <h2 className="text-3d text-headline uppercase">
+          Spokój
+          <br />i Wsparcie
+        </h2>
+      </div>
 
       <div className="flex justify-center">
         <div className="space-y-12 text-left max-w-2xl w-full">
-          <h3 className="text-3d text-title uppercase opacity-60">
+          <h3 className="text-3d text-title uppercase text-secondary">
             Nie chcesz się tym zajmować?
           </h3>
 
@@ -21,11 +31,12 @@ export function Support() {
             </span>
           </div>
 
-          <p className="text-body-lg font-bold uppercase opacity-60">
-            Zmiany kiedy chcesz, hosting na szybkim serwerze, jeden telefon zamiast szukania &quot;informatyka&quot;
+          <p className="text-body-lg font-bold uppercase text-secondary">
+            Zmiany kiedy chcesz, hosting na szybkim serwerze, jeden telefon
+            zamiast szukania &quot;informatyka&quot;
           </p>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

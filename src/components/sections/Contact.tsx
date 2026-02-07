@@ -1,13 +1,20 @@
 import { siteConfig } from '@/lib/config';
-import { Section, SectionHeader } from '@/components/ui';
 
 export function Contact() {
   return (
-    <Section id="kontakt">
-      <SectionHeader
-        label="05 — Kontakt"
-        title="Porozmawiajmy"
-      />
+    <section
+      className="min-h-screen flex flex-col justify-center px-4 md:px-12 py-32 w-full max-w-[1600px] mx-auto"
+      id="kontakt"
+    >
+      <div className="mb-16">
+        <span
+          className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
+          aria-hidden="true"
+        >
+          05 — Kontakt
+        </span>
+        <h2 className="text-3d text-headline uppercase">Porozmawiajmy</h2>
+      </div>
 
       <div className="flex justify-center">
         <div className="space-y-8 text-left max-w-2xl w-full">
@@ -15,7 +22,7 @@ export function Contact() {
             <span className="text-3d text-title uppercase block">
               {siteConfig.owner.name}
             </span>
-            <p className="text-body-lg font-bold uppercase opacity-60 mt-[52px]">
+            <p className="text-body-lg font-bold uppercase text-secondary mt-[52px]">
               {siteConfig.owner.location}
             </p>
           </div>
@@ -28,6 +35,6 @@ export function Contact() {
           </a>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

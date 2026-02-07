@@ -1,13 +1,24 @@
 import { processSteps } from '@/lib/config';
-import { Section, SectionHeader } from '@/components/ui';
 
 export function Process() {
   return (
-    <Section id="proces">
-      <SectionHeader
-        label="02 — Jak to działa"
-        title="Prosty\nProces"
-      />
+    <section
+      className="min-h-screen flex flex-col justify-center px-4 md:px-12 py-32 w-full max-w-[1600px] mx-auto"
+      id="proces"
+    >
+      <div className="mb-16">
+        <span
+          className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
+          aria-hidden="true"
+        >
+          02 — Jak to działa
+        </span>
+        <h2 className="text-3d text-headline uppercase">
+          Prosty
+          <br />
+          Proces
+        </h2>
+      </div>
 
       <div className="flex justify-center">
         <div className="flex flex-col gap-16 text-left max-w-2xl w-full">
@@ -21,7 +32,7 @@ export function Process() {
                 <h3 className="text-3d text-title uppercase mb-4 group-hover:text-white transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-body-lg font-bold uppercase opacity-60">
+                <p className="text-body-lg font-bold uppercase text-secondary">
                   {step.description}
                 </p>
               </div>
@@ -29,6 +40,6 @@ export function Process() {
           ))}
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

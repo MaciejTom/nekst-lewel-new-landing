@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Nav } from '@/components/layout';
 import { Footer } from '@/components/layout';
-import { ControlPanel } from '@/components/ControlPanel';
 
 export const metadata: Metadata = {
   title: 'Nekst Lewel - Strony internetowe dla firm budowlanych',
@@ -37,7 +36,6 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <Footer />
-        <ControlPanel />
       </body>
     </html>
   );
