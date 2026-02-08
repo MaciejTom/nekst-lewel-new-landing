@@ -14,9 +14,9 @@ export function Benefits() {
           01 — Dlaczego my
         </span>
         <h2 className="text-3d text-headline uppercase">
-          Twoja
+          Dlaczego
           <br />
-          Przewaga
+          warto
         </h2>
       </div>
 

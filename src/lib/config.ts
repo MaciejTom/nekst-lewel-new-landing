@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
   description: 'Strony internetowe dla firm budowlanych i remontowych',
   owner: {
     name: 'Maciej Tomaszewicz',
-    location: 'Kraków, Polska',
+    location: 'Kraków',
     phone: '+48515787375',
     phoneFormatted: '515 787 375',
   },
@@ -18,19 +18,19 @@ export const siteConfig: SiteConfig = {
 export const benefits: Benefit[] = [
   {
     title: 'Więcej telefonów z Google',
-    description: 'Strona zbudowana tak, żeby Google pokazywał Cię wyżej niż konkurencję. To znaczy: więcej klientów dzwoni do Ciebie, nie do innych.',
+    description: 'Strona zbudowana tak, żeby Google pokazywał Cię wyżej niż konkurencję.',
   },
   {
-    title: 'Gotowa w parę dni',
-    description: 'Nie czekasz tygodniami. Dostajesz działającą stronę, nie obietnice i "jeszcze chwilkę".',
+    title: 'Gotowa w 5-10 dni',
+    description: 'Nie czekasz miesiącami. Dostajesz działającą stronę, nie obietnice.',
   },
   {
     title: 'Działa bez Twojej uwagi',
-    description: 'Żadnych aktualizacji, żadnych "coś się popsuło". Zajmujesz się robotą, strona robi swoje.',
+    description: 'Żadnych aktualizacji, żadnych problemów. Chcesz coś zmienić? Jeden telefon.',
   },
   {
     title: 'Płacisz dopiero gdy się podoba',
-    description: 'Najpierw widzisz gotowe demo, potem decydujesz — zero ryzyka.',
+    description: 'Najpierw widzisz gotowe demo. Potem decydujesz. Zero ryzyka.',
   },
 ];
 
@@ -38,22 +38,22 @@ export const processSteps: ProcessStep[] = [
   {
     number: '01',
     title: 'Dzwonisz lub piszesz',
-    description: 'Opowiadasz o firmie — co robisz, dla kogo, czym się wyróżniasz',
+    description: 'Opowiadasz o firmie. Co robisz, dla kogo, czym się wyróżniasz.',
   },
   {
     number: '02',
     title: 'Dostajesz demo',
-    description: 'W ciągu kilku dni widzisz działającą stronę ze swoim logo i tekstami — bez płacenia',
+    description: 'W ciągu kilku dni widzisz działającą stronę ze swoim logo i tekstami. Bez płacenia.',
   },
   {
     number: '03',
     title: 'Akceptujesz lub poprawiamy',
-    description: 'Pasuje? Płacisz połowę. Chcesz zmiany? Wprowadzam. Nie podoba się? Dziękujesz i idziesz',
+    description: 'Pasuje? Płacisz połowę. Chcesz zmiany? Wprowadzam. Nie podoba się? Dziękujesz i idziesz.',
   },
   {
     number: '04',
     title: 'Strona działa',
-    description: 'Publikuję, konfiguruję, pilnuję — Ty zbierasz telefony',
+    description: 'Publikuję, konfiguruję, pilnuję. Ty zbierasz telefony.',
   },
 ];
 

@@ -33,6 +33,10 @@ export function Contact() {
           >
             {siteConfig.owner.phoneFormatted}
           </a>
+
+          <p className="text-body-lg font-bold uppercase text-secondary mt-8">
+            Odpowiadam osobiście. Bez sekretarki, bez formularzy.
+          </p>
         </div>
       </div>
     </section>

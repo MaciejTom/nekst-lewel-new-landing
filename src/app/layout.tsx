@@ -4,9 +4,9 @@ import { Nav } from '@/components/layout';
 import { Footer } from '@/components/layout';
 
 export const metadata: Metadata = {
-  title: 'Nekst Lewel - Strony internetowe dla firm budowlanych',
+  title: 'Strony internetowe dla firm budowlanych Kraków | Nekst Lewel',
   description:
-    'Strony internetowe dla firm budowlanych i remontowych. Zobaczysz swoją stronę zanim zapłacisz złotówkę. Od 2500 zł.',
+    'Strony internetowe dla firm budowlanych i remontowych. Zobaczysz demo zanim zapłacisz. Od 2500 zł.',
   keywords: [
     'strony internetowe',
     'firmy budowlane',
@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Maciej Tomaszewicz' }],
   openGraph: {
-    title: 'Nekst Lewel - Strony internetowe dla firm budowlanych',
+    title: 'Strony internetowe dla firm budowlanych Kraków | Nekst Lewel',
     description:
-      'Zobaczysz swoją stronę zanim zapłacisz złotówkę. Strony dla budowlanki od 2500 zł.',
+      'Strony internetowe dla firm budowlanych i remontowych. Zobaczysz demo zanim zapłacisz. Od 2500 zł.',
     locale: 'pl_PL',
     type: 'website',
   },

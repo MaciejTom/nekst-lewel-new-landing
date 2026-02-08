@@ -42,7 +42,7 @@ export function Hero() {
         </h1>
 
         <p className="text-body-lg font-bold uppercase tracking-tight text-secondary">
-          {siteConfig.description} — od {siteConfig.pricing.website.toLocaleString('pl-PL')} zł
+          {siteConfig.description}. Od {siteConfig.pricing.website.toLocaleString('pl-PL')} zł.
         </p>
 
         <div className="mt-12 flex gap-6">
