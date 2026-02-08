@@ -5,6 +5,7 @@ export function Contact() {
     <section
       className="md:min-h-screen flex flex-col justify-center px-4 md:px-12 py-16 md:py-32 w-full max-w-[1600px] mx-auto"
       id="kontakt"
+      aria-labelledby="kontakt-heading"
     >
       <div className="mb-16">
         <span
@@ -13,7 +14,7 @@ export function Contact() {
         >
           05 — Kontakt
         </span>
-        <h2 className="text-3d text-headline uppercase">Porozmawiajmy</h2>
+        <h2 id="kontakt-heading" className="text-3d text-headline uppercase">Porozmawiajmy</h2>
       </div>
 
       <div className="flex justify-center">
@@ -30,6 +31,7 @@ export function Contact() {
           <a
             href={`tel:${siteConfig.owner.phone}`}
             className="text-3d text-display uppercase block hover:translate-x-4 transition-transform"
+            aria-label={`Zadzwoń pod numer ${siteConfig.owner.phoneFormatted}`}
           >
             {siteConfig.owner.phoneFormatted}
           </a>

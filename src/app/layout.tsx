@@ -84,6 +84,13 @@ export default function RootLayout({
       className={`${bebasNeue.variable} ${barlow.variable} ${rubikWetPaint.variable}`}
     >
       <head>
+        {/* Preload background image for faster LCP */}
+        <link
+          rel="preload"
+          href="/newHero.webp"
+          as="image"
+          type="image/webp"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -5,6 +5,7 @@ export function Benefits() {
     <section
       className="md:min-h-screen flex flex-col justify-center px-4 md:px-12 py-16 md:py-32 w-full max-w-[1600px] mx-auto"
       id="korzysci"
+      aria-labelledby="korzysci-heading"
     >
       <div className="mb-16">
         <span
@@ -13,7 +14,7 @@ export function Benefits() {
         >
           01 — Dlaczego my
         </span>
-        <h2 className="text-3d text-headline uppercase">
+        <h2 id="korzysci-heading" className="text-3d text-headline uppercase">
           Dlaczego
           <br />
           warto

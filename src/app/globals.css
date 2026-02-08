@@ -35,10 +35,17 @@ body {
   font-family: var(--body-font);
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  /* Background tile pattern */
-  background-image: url('/newHero.jpg');
+  /* Background tile pattern - WebP with JPG fallback */
+  background-image: url('/newHero.webp');
   background-size: 400px;
   background-repeat: repeat;
+}
+
+/* Fallback for browsers without WebP support */
+@supports not (background-image: url('/newHero.webp')) {
+  body {
+    background-image: url('/newHero.jpg');
+  }
 }
 
 /* Heading styles */

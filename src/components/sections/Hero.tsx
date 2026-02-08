@@ -2,7 +2,10 @@ import { siteConfig } from '@/lib/config';
 
 export function Hero() {
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section
+      className="relative h-screen w-full flex items-center justify-center overflow-hidden"
+      aria-label="Strona główna - Nekst Lewel"
+    >
       {/* NEKST - top left */}
       <div
         className="absolute top-0 left-0 p-4 md:p-8 md:pl-10 leading-none opacity-20"
@@ -37,7 +40,11 @@ export function Hero() {
         </p>
 
         <div className="mt-12 flex gap-6">
-          <a href={`tel:${siteConfig.owner.phone}`} className="btn btn-primary">
+          <a
+            href={`tel:${siteConfig.owner.phone}`}
+            className="btn btn-primary"
+            aria-label="Umów darmowe demo - zadzwoń teraz"
+          >
             Umów darmowe demo
           </a>
         </div>
