@@ -8,10 +8,7 @@ export function Hero() {
         className="absolute top-0 left-0 p-4 md:p-8 md:pl-10 leading-none opacity-20"
         aria-hidden="true"
       >
-        <span
-          className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block"
-          style={{ fontWeight: 900 }}
-        >
+        <span className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block font-heading">
           Nekst
         </span>
       </div>
@@ -21,10 +18,7 @@ export function Hero() {
         className="absolute bottom-0 right-0 p-4 md:p-8 md:pr-10 leading-none text-right opacity-20"
         aria-hidden="true"
       >
-        <span
-          className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block"
-          style={{ fontWeight: 900 }}
-        >
+        <span className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block font-heading">
           Lewel
         </span>
       </div>
@@ -34,9 +28,7 @@ export function Hero() {
         <h1 className="text-3d text-hero uppercase mb-12 hero-key-text">
           <span>Zobaczysz swoją stronę</span>
           <br />
-          <span style={{ fontFamily: "'Rubik Wet Paint', cursive", fontWeight: 400 }}>
-            zanim zapłacisz
-          </span>
+          <span className="text-drip">zanim zapłacisz</span>
           <span> złotówkę.</span>
         </h1>
 
