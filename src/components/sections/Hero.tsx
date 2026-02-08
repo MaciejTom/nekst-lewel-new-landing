@@ -42,10 +42,12 @@ export function Hero() {
         <div className="mt-12 flex gap-6">
           <a
             href={`tel:${siteConfig.owner.phone}`}
-            className="btn btn-primary"
+            className="btn-moving-border"
             aria-label="Umów darmowe demo - zadzwoń teraz"
           >
-            Umów darmowe demo
+            <span className="btn-moving-border-content">
+              Umów darmowe demo
+            </span>
           </a>
         </div>
       </div>

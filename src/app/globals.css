@@ -191,6 +191,100 @@ h1, h2, h3 {
   color: var(--primary-color);
 }
 
+/* Moving border button - Aceternity style */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes rotate-border {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.btn-moving-border {
+  --border-width: 2px;
+  --border-radius: 0px;
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--border-width);
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0%,
+    transparent 25%,
+    var(--secondary-color) 50%,
+    transparent 75%,
+    transparent 100%
+  );
+  border-radius: var(--border-radius);
+  animation: rotate-border 3s linear infinite;
+  text-decoration: none;
+  isolation: isolate;
+}
+
+.btn-moving-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0%,
+    transparent 20%,
+    rgba(0, 0, 0, 0.8) 35%,
+    var(--secondary-color) 50%,
+    rgba(0, 0, 0, 0.8) 65%,
+    transparent 80%,
+    transparent 100%
+  );
+  border-radius: var(--border-radius);
+  animation: rotate-border 3s linear infinite;
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.btn-moving-border-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: calc(var(--border-radius) - var(--border-width));
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .btn-moving-border-content {
+    gap: 0.75rem;
+    padding: 1rem 2.25rem;
+    font-size: 1.125rem;
+  }
+}
+
+.btn-moving-border:hover .btn-moving-border-content {
+  background: #fff;
+  color: #000;
+}
+
+.btn-moving-border:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 4px;
+}
+
 /* Selection */
 ::selection {
   background-color: var(--secondary-color);
