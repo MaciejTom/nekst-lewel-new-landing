@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import { Nav } from '@/components/layout';
 import { Footer } from '@/components/layout';
@@ -8,6 +9,8 @@ import {
   generateServiceSchema,
   generateWebPageSchema,
 } from '@/lib/schema';
+
+const GA_MEASUREMENT_ID = 'G-DF4622F018';
 
 const baseUrl = 'https://nekstlewel.pl';
 
@@ -111,6 +114,20 @@ export default function RootLayout({
         />
       </head>
       <body className={`${barlow.className} antialiased overflow-x-hidden`}>
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
         {/* Skip link for keyboard/screen reader users */}
         <a
           href="#main-content"
