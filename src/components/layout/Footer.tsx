@@ -12,7 +12,7 @@ export function Footer() {
         </span>
       </div>
       <div className="text-sm font-bold uppercase tracking-widest opacity-40">
-        Nekst Lewel · 2025
+        Nekst Lewel · 2026
       </div>
     </footer>
   );

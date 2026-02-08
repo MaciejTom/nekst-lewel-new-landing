@@ -50,7 +50,7 @@ export function generateServiceSchema() {
       priceCurrency: 'PLN',
       price: siteConfig.pricing.website.toString(),
       availability: 'https://schema.org/InStock',
-      validFrom: '2025-01-01',
+      validFrom: '2026-01-01',
     },
   };
 }

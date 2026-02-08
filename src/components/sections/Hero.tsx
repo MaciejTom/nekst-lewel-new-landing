@@ -11,7 +11,7 @@ export function Hero() {
         className="absolute top-0 left-0 p-4 md:p-8 md:pl-10 leading-none opacity-20"
         aria-hidden="true"
       >
-        <span className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block font-heading">
+        <span className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block font-heading font-bold">
           Nekst
         </span>
       </div>
@@ -21,17 +21,17 @@ export function Hero() {
         className="absolute bottom-0 right-0 p-4 md:p-8 md:pr-10 leading-none text-right opacity-20"
         aria-hidden="true"
       >
-        <span className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block font-heading">
+        <span className="text-[18vw] tracking-tighter uppercase leading-[0.75] select-none text-3d cursor-default block font-heading font-bold">
           Lewel
         </span>
       </div>
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-7xl">
-        <h1 className="text-3d text-hero uppercase mb-12 hero-key-text">
+        <h1 className="text-3d text-hero uppercase mb-12">
           <span>Zobaczysz swoją stronę</span>
           <br />
-          <span className="text-drip">zanim zapłacisz</span>
+          <span className="text-drip hero-key-text">zanim zapłacisz</span>
           <span> złotówkę.</span>
         </h1>
 

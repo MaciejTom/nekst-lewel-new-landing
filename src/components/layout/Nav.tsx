@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { siteConfig } from '@/lib/config';
 
 const navLinks = [
@@ -9,9 +12,21 @@ const navLinks = [
 ];
 
 export function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[9998] px-4 md:px-12 py-6 flex justify-between items-center"
+      className={`fixed top-0 left-0 right-0 z-[9998] px-4 md:px-12 flex justify-between items-center transition-all duration-300 ${
+        scrolled ? 'py-3 bg-[#f20d0d]/50 backdrop-blur-md border-b border-black/20' : 'py-6'
+      }`}
       role="navigation"
       aria-label="Główna nawigacja"
     >

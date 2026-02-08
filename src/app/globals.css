@@ -8,7 +8,7 @@
   --heading-font: var(--font-bebas), 'Bebas Neue', sans-serif;
   --body-font: var(--font-barlow), 'Barlow', sans-serif;
   --drip-font: var(--font-rubik-wet-paint), 'Rubik Wet Paint', cursive;
-  --heading-weight: 400;
+  --heading-weight: bolder;
   --hero-weight: 400;
 
   /* Typography Scale */
