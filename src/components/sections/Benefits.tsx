@@ -3,7 +3,7 @@ import { benefits } from '@/lib/config';
 export function Benefits() {
   return (
     <section
-      className="min-h-screen flex flex-col justify-center px-4 md:px-12 py-32 w-full max-w-[1600px] mx-auto"
+      className="min-h-screen flex flex-col justify-center px-4 md:px-12 py-16 md:py-32 w-full max-w-[1600px] mx-auto"
       id="korzysci"
     >
       <div className="mb-16">
