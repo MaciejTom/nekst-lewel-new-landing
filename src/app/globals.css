@@ -1,6 +1,5 @@
 /* Google Fonts - must be first */
-/* Rubik Wet Paint - only letters needed for "zanim zapłacisz" (subset) */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&family=Rubik+Wet+Paint&text=zanim%20zap%C5%82acisz&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;500;600;700;800&family=Rubik+Wet+Paint&family=Rubik+Puddles&family=Rubik+Vinyl&display=swap');
 
 @import "tailwindcss";
 
