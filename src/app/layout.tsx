@@ -111,8 +111,15 @@ export default function RootLayout({
         />
       </head>
       <body className={`${barlow.className} antialiased overflow-x-hidden`}>
+        {/* Skip link for keyboard/screen reader users */}
+        <a
+          href="#main-content"
+          className="skip-link"
+        >
+          Przejdź do głównej treści
+        </a>
         <Nav />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

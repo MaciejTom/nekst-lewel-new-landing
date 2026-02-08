@@ -197,10 +197,49 @@ h1, h2, h3 {
   color: var(--primary-color);
 }
 
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 1rem 2rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* Focus visible */
 :focus-visible {
   outline: 2px solid var(--secondary-color);
   outline-offset: 2px;
+}
+
+/* Enhanced focus states for buttons */
+.btn:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:focus-visible {
+  background: #fff;
+  color: #000;
+}
+
+/* Focus states for links */
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
 /* Reduced motion */
