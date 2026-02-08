@@ -1,5 +1,4 @@
 import { siteConfig } from '@/lib/config';
-import { PhoneIcon } from '@/components/ui';
 
 export function Hero() {
   return (
@@ -42,13 +41,12 @@ export function Hero() {
         </h1>
 
         <p className="text-body-lg font-bold uppercase tracking-tight text-secondary">
-          {siteConfig.description}. Od {siteConfig.pricing.website.toLocaleString('pl-PL')} zł.
+          Gotowa nawet w 3 dni. Strony dla firm budowlanych. Od {siteConfig.pricing.website.toLocaleString('pl-PL')} zł.
         </p>
 
         <div className="mt-12 flex gap-6">
           <a href={`tel:${siteConfig.owner.phone}`} className="btn btn-primary">
-            <PhoneIcon size={20} />
-            {siteConfig.owner.phoneFormatted}
+            Umów darmowe demo
           </a>
         </div>
       </div>

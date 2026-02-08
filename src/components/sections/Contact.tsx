@@ -35,7 +35,7 @@ export function Contact() {
           </a>
 
           <p className="text-body-lg font-bold uppercase text-secondary mt-8">
-            Odpowiadam osobiście. Bez sekretarki, bez formularzy.
+            Odpowiadam osobiście. Jeden telefon wystarczy.
           </p>
         </div>
       </div>

@@ -21,7 +21,7 @@ export const benefits: Benefit[] = [
     description: 'Strona zbudowana tak, żeby Google pokazywał Cię wyżej niż konkurencję.',
   },
   {
-    title: 'Gotowa w 5-10 dni',
+    title: 'Gotowa nawet w 3 dni',
     description: 'Nie czekasz miesiącami. Dostajesz działającą stronę, nie obietnice.',
   },
   {
