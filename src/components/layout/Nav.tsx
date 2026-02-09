@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { siteConfig } from '@/lib/config';
+import { trackPhoneClick } from '@/lib/analytics';
 
 const navLinks = [
   { href: '#korzysci', label: 'Korzyści' },
@@ -53,6 +54,7 @@ export function Nav() {
           href={`tel:${siteConfig.owner.phone}`}
           className="btn btn-primary text-sm md:text-base"
           aria-label={`Zadzwoń: ${siteConfig.owner.phoneFormatted}`}
+          onClick={() => trackPhoneClick('nav')}
         >
           {siteConfig.owner.phoneFormatted}
         </a>

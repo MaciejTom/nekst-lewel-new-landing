@@ -1,6 +1,7 @@
 'use client';
 
 import { siteConfig } from '@/lib/config';
+import { trackPhoneClick } from '@/lib/analytics';
 import { motion } from 'motion/react';
 
 export function Hero() {
@@ -68,6 +69,7 @@ export function Hero() {
             href={`tel:${siteConfig.owner.phone}`}
             className="btn btn-primary btn-shimmer"
             aria-label="Umów darmowe demo - zadzwoń teraz"
+            onClick={() => trackPhoneClick('hero')}
           >
             Umów darmowe demo
           </a>

@@ -2,14 +2,16 @@
 
 import { benefits } from '@/lib/config';
 import { FadeUp, Stagger, StaggerItem } from '@/components/ui/Animate';
+import { SectionTracker } from '@/components/ui/SectionTracker';
 
 export function Benefits() {
   return (
-    <section
-      className="md:min-h-screen flex flex-col justify-center px-4 md:px-12 py-16 md:py-32 w-full max-w-[1600px] mx-auto"
-      id="korzysci"
-      aria-labelledby="korzysci-heading"
-    >
+    <SectionTracker sectionName="korzysci">
+      <section
+        className="md:min-h-screen flex flex-col justify-center px-4 md:px-12 py-16 md:py-32 w-full max-w-[1600px] mx-auto"
+        id="korzysci"
+        aria-labelledby="korzysci-heading"
+      >
       <FadeUp className="mb-16">
         <span
           className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
@@ -36,6 +38,7 @@ export function Benefits() {
           </StaggerItem>
         ))}
       </Stagger>
-    </section>
+      </section>
+    </SectionTracker>
   );
 }
