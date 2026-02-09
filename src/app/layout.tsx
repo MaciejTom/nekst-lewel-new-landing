@@ -125,12 +125,12 @@ export default function RootLayout({
         />
       </head>
       <body className={`${barlow.className} antialiased overflow-x-hidden`}>
-        {/* Google Analytics */}
+        {/* Google Analytics - lazyOnload for better LCP */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
