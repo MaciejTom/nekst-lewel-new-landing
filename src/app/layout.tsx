@@ -53,11 +53,20 @@ export const metadata: Metadata = {
     siteName: 'Nekst Lewel',
     locale: 'pl_PL',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Nekst Lewel - Strony internetowe dla firm budowlanych',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Strony internetowe dla firm budowlanych | Nekst Lewel',
     description: 'Zobaczysz demo zanim zapłacisz. Gotowe w 3 dni. Od 2500 zł.',
+    images: ['/og-image.jpg'],
   },
   category: 'Web Design',
 };
@@ -94,6 +103,8 @@ export default function RootLayout({
           as="image"
           type="image/webp"
         />
+        {/* PWA manifest */}
+        <link rel="manifest" href="/manifest.json" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

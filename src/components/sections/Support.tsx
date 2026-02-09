@@ -1,4 +1,7 @@
+'use client';
+
 import { siteConfig } from '@/lib/config';
+import { FadeUp } from '@/components/ui/Animate';
 
 export function Support() {
   return (
@@ -7,7 +10,7 @@ export function Support() {
       id="opieka"
       aria-labelledby="opieka-heading"
     >
-      <div className="mb-16">
+      <FadeUp className="mb-16">
         <span
           className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
           aria-hidden="true"
@@ -18,24 +21,28 @@ export function Support() {
           Spokój
           <br />i Wsparcie
         </h2>
-      </div>
+      </FadeUp>
 
       <div className="flex justify-center">
         <div className="space-y-12 text-left max-w-2xl w-full">
-          <h3 className="text-3d text-title uppercase text-secondary">
-            Nie chcesz się tym zajmować?
-          </h3>
+          <FadeUp delay={0.1}>
+            <h3 className="text-3d text-title uppercase text-secondary">
+              Nie chcesz się tym zajmować?
+            </h3>
+          </FadeUp>
 
-          <div>
+          <FadeUp delay={0.2}>
             <span className="text-3d text-display uppercase">
               {siteConfig.pricing.support} zł / msc
             </span>
-          </div>
+          </FadeUp>
 
-          <p className="text-body-lg font-bold uppercase text-secondary">
-            Zmiany kiedy chcesz, hosting na szybkim serwerze, jeden telefon
-            zamiast szukania &quot;informatyka&quot;
-          </p>
+          <FadeUp delay={0.3}>
+            <p className="text-body-lg font-bold uppercase text-secondary">
+              Zmiany kiedy chcesz, hosting na szybkim serwerze, jeden telefon
+              zamiast szukania &quot;informatyka&quot;
+            </p>
+          </FadeUp>
         </div>
       </div>
     </section>

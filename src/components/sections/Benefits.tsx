@@ -1,4 +1,7 @@
+'use client';
+
 import { benefits } from '@/lib/config';
+import { FadeUp, Stagger, StaggerItem } from '@/components/ui/Animate';
 
 export function Benefits() {
   return (
@@ -7,7 +10,7 @@ export function Benefits() {
       id="korzysci"
       aria-labelledby="korzysci-heading"
     >
-      <div className="mb-16">
+      <FadeUp className="mb-16">
         <span
           className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
           aria-hidden="true"
@@ -19,20 +22,20 @@ export function Benefits() {
           <br />
           warto
         </h2>
-      </div>
+      </FadeUp>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
+      <Stagger className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {benefits.map((benefit, index) => (
-          <div key={index} className="group">
+          <StaggerItem key={index} className="group">
             <h3 className="text-3d text-title uppercase mb-6 group-hover:text-white transition-colors">
               {benefit.title}
             </h3>
             <p className="text-body-lg font-bold uppercase text-secondary max-w-xl">
               {benefit.description}
             </p>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </Stagger>
     </section>
   );
 }

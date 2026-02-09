@@ -1,4 +1,7 @@
+'use client';
+
 import { processSteps } from '@/lib/config';
+import { FadeUp, Stagger, StaggerItem } from '@/components/ui/Animate';
 
 export function Process() {
   return (
@@ -7,7 +10,7 @@ export function Process() {
       id="proces"
       aria-labelledby="proces-heading"
     >
-      <div className="mb-16">
+      <FadeUp className="mb-16">
         <span
           className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
           aria-hidden="true"
@@ -19,12 +22,12 @@ export function Process() {
           <br />
           Proces
         </h2>
-      </div>
+      </FadeUp>
 
       <div className="flex justify-center">
-        <div className="flex flex-col gap-16 text-left max-w-2xl w-full">
+        <Stagger className="flex flex-col gap-16 text-left max-w-2xl w-full">
           {processSteps.map((step) => (
-            <div
+            <StaggerItem
               key={step.number}
               className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-6 items-start group"
             >
@@ -37,9 +40,9 @@ export function Process() {
                   {step.description}
                 </p>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </section>
   );

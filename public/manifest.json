@@ -1,0 +1,16 @@
+{
+  "name": "Nekst Lewel - Strony dla firm budowlanych",
+  "short_name": "Nekst Lewel",
+  "description": "Profesjonalne strony internetowe dla firm budowlanych i remontowych",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f20d0d",
+  "theme_color": "#f20d0d",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

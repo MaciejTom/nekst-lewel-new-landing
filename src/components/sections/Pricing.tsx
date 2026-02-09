@@ -1,4 +1,7 @@
+'use client';
+
 import { siteConfig } from '@/lib/config';
+import { FadeUp } from '@/components/ui/Animate';
 
 export function Pricing() {
   return (
@@ -7,7 +10,7 @@ export function Pricing() {
       id="oferta"
       aria-labelledby="oferta-heading"
     >
-      <div className="mb-16">
+      <FadeUp className="mb-16">
         <span
           className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
           aria-hidden="true"
@@ -19,28 +22,28 @@ export function Pricing() {
           <br />
           Inwestycja
         </h2>
-      </div>
+      </FadeUp>
 
       <div className="flex justify-center">
         <div className="space-y-12 text-left max-w-2xl w-full">
-          <div>
+          <FadeUp delay={0.1}>
             <span className="text-3d text-display uppercase">
               od {siteConfig.pricing.website.toLocaleString('pl-PL')} zł
             </span>
-          </div>
+          </FadeUp>
 
-          <div className="space-y-6">
+          <FadeUp delay={0.2} className="space-y-6">
             <p className="text-title uppercase tracking-tight">Płatność 50/50</p>
             <p className="text-body-lg font-bold uppercase text-secondary">
               Połowa po akceptacji demo, połowa po uruchomieniu
             </p>
-          </div>
+          </FadeUp>
 
-          <div className="pt-4">
+          <FadeUp delay={0.3} className="pt-4">
             <span className="inline-block px-6 py-3 border-2 border-current text-sm font-bold uppercase tracking-widest">
               Żadnych ukrytych kosztów
             </span>
-          </div>
+          </FadeUp>
         </div>
       </div>
     </section>

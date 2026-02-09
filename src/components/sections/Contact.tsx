@@ -1,4 +1,7 @@
+'use client';
+
 import { siteConfig } from '@/lib/config';
+import { FadeUp } from '@/components/ui/Animate';
 
 export function Contact() {
   return (
@@ -7,7 +10,7 @@ export function Contact() {
       id="kontakt"
       aria-labelledby="kontakt-heading"
     >
-      <div className="mb-16">
+      <FadeUp className="mb-16">
         <span
           className="block text-xs font-bold uppercase tracking-[0.2em] mb-6 text-muted"
           aria-hidden="true"
@@ -15,30 +18,34 @@ export function Contact() {
           05 — Kontakt
         </span>
         <h2 id="kontakt-heading" className="text-3d text-headline uppercase">Porozmawiajmy</h2>
-      </div>
+      </FadeUp>
 
       <div className="flex justify-center">
         <div className="space-y-8 text-left max-w-2xl w-full">
-          <div>
+          <FadeUp delay={0.1}>
             <span className="text-3d text-title uppercase block">
               {siteConfig.owner.name}
             </span>
             <p className="text-body-lg font-bold uppercase text-secondary mt-[52px]">
               {siteConfig.owner.location}
             </p>
-          </div>
+          </FadeUp>
 
-          <a
-            href={`tel:${siteConfig.owner.phone}`}
-            className="text-3d text-display uppercase block hover:translate-x-4 transition-transform"
-            aria-label={`Zadzwoń pod numer ${siteConfig.owner.phoneFormatted}`}
-          >
-            {siteConfig.owner.phoneFormatted}
-          </a>
+          <FadeUp delay={0.2}>
+            <a
+              href={`tel:${siteConfig.owner.phone}`}
+              className="text-3d text-display uppercase block hover:translate-x-4 transition-transform"
+              aria-label={`Zadzwoń pod numer ${siteConfig.owner.phoneFormatted}`}
+            >
+              {siteConfig.owner.phoneFormatted}
+            </a>
+          </FadeUp>
 
-          <p className="text-body-lg font-bold uppercase text-secondary mt-8">
-            Odpowiadam osobiście. Jeden telefon wystarczy.
-          </p>
+          <FadeUp delay={0.3}>
+            <p className="text-body-lg font-bold uppercase text-secondary mt-8">
+              Odpowiadam osobiście. Jeden telefon wystarczy.
+            </p>
+          </FadeUp>
         </div>
       </div>
     </section>
